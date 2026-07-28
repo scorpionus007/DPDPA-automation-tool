@@ -1,0 +1,136 @@
+[2026-03-22 15:32:00] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:32:00] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:32:19] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:32:19] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:32:49] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:32:49] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:34:21] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:34:21] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:43:07] INFO | dpdp.scan | Starting ingestion for https://github.com/scorpionus007/odoo-hackathon-rewear.git
+[2026-03-22 15:43:10] INFO | dpdp.scan | Ingested 124 files
+[2026-03-22 15:43:15] INFO | dpdp.scan | Extract complete (see Extraction summary above from dpdp_scanner)
+[2026-03-22 15:43:15] INFO | dpdp.scan | Starting LLM route classification (Rich output follows)
+[2026-03-22 15:43:15] ERROR | dpdp.scan | Scan failed: 'charmap' codec can't encode character '\U0001f5fa' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\backend\main.py", line 442, in run_scan_generator
+    extracted = await run_in_threadpool(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+        run_route_classification, extracted, repo_files, True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\dpdp_scanner\llm_layer.py", line 2020, in run_route_classification
+    console.print("\n[bold cyan]🗺  Route Classification[/bold cyan]")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 2042, in _check_buffer
+    self._write_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 2078, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_windows_renderer.py", line 17, in legacy_windows_render
+    term.write_styled(text, style)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_win32_console.py", line 441, in write_styled
+    self.write_text(text)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+    ~~~~~~~~~~^^^^^^
+  File "C:\Users\Skyworth\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f5fa' in position 0: character maps to <undefined>
+[2026-03-22 15:43:29] INFO | dpdp.scan | Starting ingestion for https://github.com/scorpionus007/safe-hands.git
+[2026-03-22 15:43:33] INFO | dpdp.scan | Ingested 129 files
+[2026-03-22 15:43:40] INFO | dpdp.scan | Extract complete (see Extraction summary above from dpdp_scanner)
+[2026-03-22 15:43:40] INFO | dpdp.scan | Starting LLM route classification (Rich output follows)
+[2026-03-22 15:43:40] ERROR | dpdp.scan | Scan failed: 'charmap' codec can't encode character '\U0001f5fa' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\backend\main.py", line 442, in run_scan_generator
+    extracted = await run_in_threadpool(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+        run_route_classification, extracted, repo_files, True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\dpdp_scanner\llm_layer.py", line 2020, in run_route_classification
+    console.print("\n[bold cyan]🗺  Route Classification[/bold cyan]")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 2042, in _check_buffer
+    self._write_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\console.py", line 2078, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_windows_renderer.py", line 17, in legacy_windows_render
+    term.write_styled(text, style)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_win32_console.py", line 441, in write_styled
+    self.write_text(text)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Skyworth\Desktop\Compliance_Scanner\venv\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+    ~~~~~~~~~~^^^^^^
+  File "C:\Users\Skyworth\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f5fa' in position 0: character maps to <undefined>
+[2026-03-22 15:46:53] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:46:53] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:15] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:15] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:45] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:45] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:58] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:47:58] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:48:19] INFO | dpdp.scan | Ready. Scan/API logs: (1) this terminal (2) tail file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log
+[2026-03-22 15:48:19] INFO | backend.main | backend.* at INFO (BACKEND_LOG_LEVEL=DEBUG for more). Log file: C:\Users\Skyworth\Desktop\Compliance_Scanner\logs\backend-scan.log

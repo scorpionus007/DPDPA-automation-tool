@@ -1,0 +1,10 @@
+venv
+.env
+gemini_keys.txt
+pycache
+*.pyc
+/temp_repos
+dpdp-scanner/
+backend/compliance_local.db
+.dpdp-history/
+backend/static/reports/report_*.pdf

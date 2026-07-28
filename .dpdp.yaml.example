@@ -1,0 +1,19 @@
+# DPDP Scanner config (optional). Copy to .dpdp.yaml or dpdp-scanner.yaml in repo root.
+#
+# consent_skip_path_segments: path segments that suggest internal audit/compliance/reporting
+# (DPDP Section 7 legitimate use). Only full path segments are matched to avoid false negatives
+# (e.g. "audit" matches "app/dashboard/audit/page.tsx", not "auditor.py").
+# Default if omitted: audit, audits, compliance, reporting, reports, internal
+consent_skip_path_segments:
+  - audit
+  - audits
+  - compliance
+  - reporting
+  - reports
+  - internal
+# suppressions: explicit (rule, path_glob) pairs to drop findings. Use sparingly to avoid false negatives.
+suppressions:
+  - rule: CONSENT_MISSING
+    path_glob: "**/audit/**"
+  - rule: CONSENT_MISSING
+    path_glob: "**/dashboard/audit/**"

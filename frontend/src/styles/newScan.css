@@ -1,0 +1,567 @@
+/* Breadcrumb */
+.ns-main-container {
+  display: flex !important;
+  flex-direction: column;
+  background-color: #f7f9fb !important;
+  min-height: 100vh;
+}
+
+.ns-breadcrumb {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ns-breadcrumb-separator {
+  color: #cbd5e1;
+}
+
+.ns-breadcrumb-active {
+  color: #3b82f6;
+}
+
+.ns-breadcrumb-link {
+  text-decoration: none;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.ns-breadcrumb-link:hover {
+  color: #3b82f6;
+}
+
+/* Card Container */
+.ns-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ns-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ns-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.ns-header p {
+  font-size: 0.875rem;
+  color: #64748b;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Form Sections */
+.ns-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ns-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.05em;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.ns-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ns-input-icon {
+  position: absolute;
+  left: 1rem;
+  width: 18px;
+  height: 18px;
+  color: #94a3b8;
+}
+
+.ns-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.875rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.ns-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.ns-input::placeholder {
+  color: #94a3b8;
+}
+
+.ns-helper-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Divider */
+.ns-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.ns-divider::before,
+.ns-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ns-divider span {
+  padding: 0 1rem;
+}
+
+/* Github Button */
+.ns-github-connect {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ns-btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ns-btn-github:hover {
+  background-color: #1e293b;
+}
+
+.ns-btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Repositories Section */
+.ns-repos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.ns-search-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+}
+
+.ns-search-icon {
+  position: absolute;
+  left: 0.875rem;
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+}
+
+.ns-search-input {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ns-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.ns-repos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.ns-repo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.ns-repo-item:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.ns-repo-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ns-repo-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text-muted {
+  color: #94a3b8;
+}
+
+.text-blue {
+  color: #3b82f6;
+}
+
+.ns-repo-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ns-repo-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.ns-repo-meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.ns-btn-select {
+  padding: 0.55rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  background: var(--gradient-accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.ns-btn-select:hover {
+  background: var(--gradient-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+}
+
+.ns-btn-select.selected {
+  background: #0f172a; /* Dark selected state for contrast */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Actions */
+.ns-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ns-btn-cancel {
+  padding: 0.75rem 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ns-btn-cancel:hover {
+  background-color: #fff1f2; /* Light red background */
+  border-color: #fecaca;   /* Soft red border */
+  color: #e11d48;         /* Vibrant red text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.08);
+}
+
+.ns-btn-continue {
+  padding: 0.75rem 2.25rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--gradient-accent);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ns-btn-continue:hover:not(:disabled) {
+  background: var(--gradient-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.45);
+}
+
+.ns-btn-continue:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Scan Progress Modal ─── */
+.scan-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.scan-modal {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scan-modal-icon {
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  color: #3b82f6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.scan-modal h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.scan-modal p {
+  color: #64748b;
+  font-size: 0.9375rem;
+  margin-bottom: 2.5rem;
+}
+
+.scan-progress-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.scan-progress-bar {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.scan-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scan-status-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.scan-completed-icon {
+  color: #10b981;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.3));
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.scan-modal-icon {
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  color: #3b82f6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: pulse-blue 2s infinite ease-in-out;
+}
+
+@keyframes pulse-blue {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bg-success {
+  background: linear-gradient(90deg, #10b981, #34d399) !important;
+}
+
+.text-success {
+  color: #10b981 !important;
+}
+
+.scan-modal-actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-modal-primary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.btn-modal-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.btn-modal-secondary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem;
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-modal-secondary:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.bg-error {
+  background: linear-gradient(90deg, #ef4444, #f87171) !important;
+}
+
+.text-error {
+  color: #ef4444 !important;
+}
+
+/* Progress List Animation */
+.scan-stage-item {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+

@@ -1,0 +1,566 @@
+/* ===== Auth Pages (Login / Signup) — Clean Professional Theme ===== */
+
+/* ---------- Layout ---------- */
+.auth-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: var(--color-bg-primary);
+}
+
+/* ---------- Subtle Background Pattern ---------- */
+.auth-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(99, 102, 241, 0.03) 0%, transparent 50%);
+}
+
+/* Hide noise and orbs — no longer needed */
+.auth-noise,
+.auth-bg-orb {
+  display: none;
+}
+
+/* ---------- Card Container ---------- */
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem 2.75rem;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-base);
+}
+
+/* Remove old card effects */
+.auth-card::before,
+.auth-card::after {
+  display: none;
+}
+
+/* ---------- Heading ---------- */
+.auth-heading {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.auth-heading h1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  line-height: 1.3;
+}
+
+.auth-heading p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.375rem;
+  line-height: 1.5;
+}
+
+/* ---------- Form ---------- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+/* ---------- Input Group ---------- */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.01em;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.875rem;
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition: color var(--transition-fast);
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 48px;
+  padding: 0 0.875rem 0 2.75rem;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  transition: all var(--transition-fast);
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.input-wrapper input:hover {
+  border-color: var(--color-border-hover);
+}
+
+.input-wrapper input:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.input-wrapper input:focus ~ .input-icon,
+.input-wrapper input:focus + .input-icon {
+  color: var(--color-accent);
+}
+
+/* Password toggle */
+.input-toggle {
+  position: absolute;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.input-toggle:hover {
+  color: var(--color-text-secondary);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.input-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- Input Error ---------- */
+.input-error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+
+.input-error svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ---------- Password Strength ---------- */
+.password-strength {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.password-strength-bars {
+  display: flex;
+  gap: 4px;
+}
+
+.password-strength-bar {
+  flex: 1;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: #e2e8f0;
+  overflow: hidden;
+  transition: background var(--transition-base);
+}
+
+.password-strength-bar.active {
+  background: var(--color-error);
+}
+
+.password-strength-bar.active.medium {
+  background: var(--color-warning);
+}
+
+.password-strength-bar.active.strong {
+  background: var(--color-success);
+}
+
+.password-strength-label {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+/* ---------- Forgot Link ---------- */
+.auth-forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.5rem;
+}
+
+.auth-forgot a {
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.auth-forgot a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Label Row (label + forgot on same line) ---------- */
+.label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.label-row label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.label-row a {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.label-row a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Submit Button ---------- */
+.auth-submit-btn {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+/* Remove old shimmer and shine */
+.auth-submit-btn::before,
+.auth-submit-btn::after {
+  display: none;
+}
+
+.auth-submit-btn:hover {
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-submit-btn:disabled:hover {
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+.auth-submit-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Loading spinner inside button */
+.auth-submit-btn .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: rotate 0.6s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Divider ---------- */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.25rem 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.auth-divider span {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- GitHub Button ---------- */
+.auth-github-btn {
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-github-bg);
+  border: 1px solid var(--color-github-border);
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  transition: all var(--transition-base);
+}
+
+.auth-github-btn:hover {
+  background: var(--color-github-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.auth-github-btn:active {
+  transform: translateY(0);
+}
+
+.auth-github-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---------- Footer Link ---------- */
+.auth-footer {
+  text-align: center;
+  margin-top: 1.75rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.auth-footer a,
+.auth-footer .auth-footer-link {
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+/* "Create account" styled as a pill button */
+.auth-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+  background: var(--gradient-accent);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+  margin-top: 0.5rem;
+}
+
+.auth-footer-btn:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+/* Log in link style (for signup page) */
+.auth-footer-link {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-text-primary);
+}
+
+.auth-footer-link:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* ---------- Terms ---------- */
+.auth-terms {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 1.25rem;
+  line-height: 1.6;
+}
+
+.auth-terms a {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-fast);
+}
+
+.auth-terms a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* ---------- Checkbox ---------- */
+.auth-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-checkbox input {
+  display: none;
+}
+
+.auth-checkbox-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  margin-top: 1px;
+}
+
+.auth-checkbox input:checked + .auth-checkbox-box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.auth-checkbox input:checked + .auth-checkbox-box svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.auth-checkbox-box svg {
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all var(--transition-fast);
+}
+
+.auth-checkbox-label {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.auth-checkbox-label a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-checkbox-label a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Success Message ---------- */
+.auth-success {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--color-success);
+}
+
+.auth-success svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .auth-heading h1 {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
